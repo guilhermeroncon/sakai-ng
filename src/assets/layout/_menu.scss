@@ -1,3 +1,4 @@
+
 @use 'mixins' as *;
 
 .layout-sidebar {
@@ -157,4 +158,33 @@
 .layout-submenu-enter-active {
     overflow: hidden;
     transition: max-height 1s ease-in-out;
+}
+
+/* Estilos para o perfil do usuário na sidebar */
+.layout-sidebar-profile {
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--surface-border);
+}
+
+.layout-sidebar-profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem auto;
+}
+
+.layout-sidebar-profile-name {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.layout-sidebar-profile-role {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
 }
