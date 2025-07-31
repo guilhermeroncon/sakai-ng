@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MenuItem } from 'primeng/api';
@@ -15,7 +15,7 @@ import { AppMenuitem } from './app.menuitem';
         </ng-container>
     </ul> `
 })
-export class AppMenu {
+export class AppMenu implements OnInit {
     model: MenuItem[] = [];
 
     ngOnInit() {
@@ -24,6 +24,14 @@ export class AppMenu {
                 label: 'Home',
                 items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', routerLink: ['/'] }]
             },
+            // SEÇÃO ADICIONADA
+            {
+                label: 'Experimentos',
+                items: [
+                    { label: 'Cadastro de Experimento', icon: 'pi pi-fw pi-flask', routerLink: ['/cadastro-experimento'] }
+                ]
+            },
+            // RESTANTE DO MENU ORIGINAL RESTAURADO
             {
                 label: 'UI Components',
                 items: [
